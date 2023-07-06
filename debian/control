@@ -1,15 +1,43 @@
-Source: template-repository
-Section: unknown
+Source: mctc-lib
+Section: science
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Andrius Merkys <merkys@debian.org>,
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ gfortran,
+ meson,
+Standards-Version: 4.6.1
+Homepage: https://github.com/grimme-lab/mctc-lib
+Vcs-Browser: https://salsa.debian.org/science-team/mctc-lib
+Vcs-Git: https://salsa.debian.org/science-team/mctc-lib.git
 
-Package: template-repository
+Package: libmctc-lib-dev
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Section: libdevel
+Depends:
+ libmctc-lib0 (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: modular computation tool chain library (development files)
+ Common tool chain for working with molecular structure data in various
+ applications. This library provides a unified way to perform operations on
+ molecular structure data, like reading and writing to common geometry file
+ formats.
+ .
+ This package contains development files.
+
+Package: libmctc-lib0
+Architecture: any
+Section: libs
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Multi-Arch: same
+Description: modular computation tool chain library
+ Common tool chain for working with molecular structure data in various
+ applications. This library provides a unified way to perform operations on
+ molecular structure data, like reading and writing to common geometry file
+ formats.

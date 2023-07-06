@@ -1,0 +1,2 @@
+version=4
+opts=filenamemangle=s/.*\/v(\d\S+)\.tar\.gz/mctc-lib-$1\.tar\.gz/ https://github.com/grimme-lab/mctc-lib/tags .*\/v(\d\S+)\.tar\.gz

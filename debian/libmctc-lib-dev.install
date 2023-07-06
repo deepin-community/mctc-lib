@@ -1,0 +1,3 @@
+usr/include/mctc-lib
+usr/lib/*/libmctc-lib.so
+usr/lib/*/pkgconfig

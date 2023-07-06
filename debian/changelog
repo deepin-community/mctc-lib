@@ -1,5 +1,19 @@
-template-repository (1.0-1) unstable; urgency=medium
+mctc-lib (0.3.1-3) unstable; urgency=medium
 
-  * Initial release
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Add debian/watch file, using GitHub.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Andrius Merkys <merkys@debian.org>  Mon, 03 Oct 2022 10:45:26 -0400
+
+mctc-lib (0.3.1-2) unstable; urgency=medium
+
+  * libmctc-lib-dev depends on libmctc-lib0.
+
+ -- Andrius Merkys <merkys@debian.org>  Thu, 22 Sep 2022 01:38:38 -0400
+
+mctc-lib (0.3.1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #1019958)
+
+ -- Andrius Merkys <merkys@debian.org>  Sat, 17 Sep 2022 01:32:13 -0400
